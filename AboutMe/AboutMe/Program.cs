@@ -10,7 +10,8 @@ namespace AboutMe
 
             Console.Write("Do I have a pet parrot?");
             string parrot = Console.ReadLine();
-            ParrotAnswer(parrot);
+            string caseParrot = parrot.ToUpper();
+            ParrotAnswer(caseParrot);
 
             Console.WriteLine("Can I swim?");
             string canISwim = Console.ReadLine();
@@ -18,26 +19,27 @@ namespace AboutMe
 
             Console.WriteLine("What is my favorite candy?");
             string candy = Console.ReadLine();
-            CandyAnswer("Chocolate");
+            CandyAnswer(candy);
 
             Console.WriteLine("How many sisters do I have?");
             string sister = Console.ReadLine();
             int sisterGuess = Convert.ToInt32(sister);
             SisterAnswer(sisterGuess);
 
-            Console.WriteLine("My favorite movie genre is ");
+            Console.WriteLine("My favorite movie genre is Fantasy. True or False? ");
             string movieGenre = Console.ReadLine();
             MovieGenreAnswer(movieGenre);
+
         }
 
-        static void ParrotAnswer(string parrot)
+        static void ParrotAnswer(string caseParrot)
         {
-            if (parrot == "yes")
+            if (caseParrot == "yes")
             {
                 string incorrectMessage = "Sorry, you got that incorrect.";
                 Console.Write(incorrectMessage);
             }
-            else if (parrot == "no")
+            else if (caseParrot == "no")
             {
                 string correctMessage = "Ding Ding! You got that correct!";
                 Console.Write(correctMessage);
@@ -68,7 +70,7 @@ namespace AboutMe
             }
         }
 
-        static string CandyAnswer(string candy)
+        static void CandyAnswer(string candy)
         {
             if (candy == "chocolate")
             {
@@ -87,24 +89,36 @@ namespace AboutMe
             }
         }
 
-        static void SisterAnswer(int sisterGuess)
+        static int SisterAnswer(int sisterGuess)
         {
+            int correctGuess = 1;
             if (sisterGuess == 1)
             {
                 string correctMessage = "That's correct!";
                 Console.Write(correctMessage);
+                return correctGuess;
             }
             else
             {
                 string incorrectMessage = "That is incorrect!";
                 Console.Write(incorrectMessage);
+                return correctGuess;
             }
         }
 
-        static bool MovieGenreAnswer(bool movieGenre);
+        static bool MovieGenreAnswer(string movieGenre)
         {
-        if (MovieGenreAnswer ||)
-               
+        if (movieGenre == "true")
+            {
+                Console.WriteLine("Nope.");
+                return false;
+            }
+        else
+            {
+                Console.WriteLine("Yes");
+                return true;
+   
+            }
         } 
     }
 }
