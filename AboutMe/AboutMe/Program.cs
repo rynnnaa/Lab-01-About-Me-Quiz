@@ -8,7 +8,7 @@ namespace AboutMe
         {
             Console.WriteLine("How well do you know me? ");
 
-            Console.WriteLine("Do I have a pet parrot? "); 
+            Console.WriteLine("Do I have a pet parrot? ");
             string parrot = Console.ReadLine();
             string caseParrot = parrot.ToUpper();
             ParrotAnswer(caseParrot);
@@ -31,8 +31,7 @@ namespace AboutMe
             Console.WriteLine("My favorite movie genre is Fantasy. True or False? ");
             string movieGenre = Console.ReadLine();
             string caseMovie = movieGenre.ToUpper();
-            MovieGenreAnswer(movieGenre);
-
+            MovieGenreAnswer(caseMovie);
         }
 
         static void ParrotAnswer(string caseParrot)
@@ -89,34 +88,41 @@ namespace AboutMe
 
         static int SisterAnswer(int sisterGuess)
         {
-            int correctGuess = 1;
-            if (sisterGuess == 1)
+            try
             {
-                string correctMessage = "That's correct!";
-                Console.Write(correctMessage);
-                return correctGuess;
+                int correctGuess = 1;
+                if (sisterGuess == 1)
+                {
+                    string correctMessage = "That's correct!";
+                    Console.Write(correctMessage);
+                    return correctGuess;
+                }
+                else
+                {
+                    string incorrectMessage = "That is incorrect!";
+                    Console.Write(incorrectMessage);
+                    return correctGuess;
+                }
             }
-            else
+            catch (FormatException)
             {
-                string incorrectMessage = "That is incorrect!";
-                Console.Write(incorrectMessage);
-                return correctGuess;
+                Console.WriteLine("Incorrect Format");
             }
+            return 0;
         }
 
         static bool MovieGenreAnswer(string caseMovie)
         {
-        if (caseMovie == "true")
+            if (caseMovie == "true")
             {
                 Console.WriteLine("Nope.");
                 return false;
             }
-        else
+            else
             {
                 Console.WriteLine("Yes");
                 return true;
-   
             }
-        } 
+        }
     }
 }
