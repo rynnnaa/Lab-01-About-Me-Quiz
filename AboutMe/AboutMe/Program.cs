@@ -29,7 +29,9 @@ namespace AboutMe
 
         static string ParrotAnswer(string parrot)
         {
-            if par
+            if ParrotAnswer = yes
+                Console.Write("Sorry, you got that incorrect.");
+
         }
 
         static void SisterAnswer(int sisterGuess);
