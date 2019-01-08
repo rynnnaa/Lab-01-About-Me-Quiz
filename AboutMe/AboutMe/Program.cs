@@ -10,6 +10,7 @@ namespace AboutMe
 
             Console.Write("Do I have a pet parrot?");
             string parrot = Console.ReadLine();
+            ParrotAnswer(parrot);
 
             Console.WriteLine("Can I swim?");
             string canISwim = Console.ReadLine();
@@ -19,9 +20,19 @@ namespace AboutMe
 
             Console.WriteLine("How many sisters do I have?");
             string sister = Console.ReadLine();
+            int sisterGuess = Convert.ToInt32(sister);
+            SisterAnswer(sisterGuess);
 
-
+            Console.WriteLine("What's my favorite movie genre?");
+            string movieGenre = Console.ReadLine();
         }
+
+        static string ParrotAnswer(string parrot)
+        {
+            if par
+        }
+
+        static void SisterAnswer(int sisterGuess);
 
     }
 }
