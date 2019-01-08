@@ -27,6 +27,7 @@ namespace AboutMe
 
             Console.WriteLine("My favorite movie genre is ");
             string movieGenre = Console.ReadLine();
+            MovieGenreAnswer(movieGenre);
         }
 
         static void ParrotAnswer(string parrot)
@@ -86,8 +87,8 @@ namespace AboutMe
             }
         }
 
-            static void SisterAnswer(int sisterGuess)
-            {
+        static void SisterAnswer(int sisterGuess)
+        {
             if (sisterGuess == 1)
             {
                 string correctMessage = "That's correct!";
@@ -98,6 +99,11 @@ namespace AboutMe
                 string incorrectMessage = "That is incorrect!";
                 Console.Write(incorrectMessage);
             }
+        }
+
+        static bool MovieGenreAnswer(bool movieGenre);
+        {
+        if (MovieGenreAnswer ||)
                
         } 
     }
