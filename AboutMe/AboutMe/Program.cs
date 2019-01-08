@@ -12,19 +12,21 @@ namespace AboutMe
             string parrot = Console.ReadLine();
             ParrotAnswer(parrot);
 
-            //Console.WriteLine("Can I swim?");
-            //string canISwim = Console.ReadLine();
+            Console.WriteLine("Can I swim?");
+            string canISwim = Console.ReadLine();
+            SwimAnswer(canISwim);
 
-            //Console.WriteLine("What is my favorite candy?");
-            //string candy = Console.ReadLine();
+            Console.WriteLine("What is my favorite candy?");
+            string candy = Console.ReadLine();
+            CandyAnswer("Chocolate");
 
-            //Console.WriteLine("How many sisters do I have?");
-            //string sister = Console.ReadLine();
-            //int sisterGuess = Convert.ToInt32(sister);
-            //SisterAnswer(sisterGuess);
+            Console.WriteLine("How many sisters do I have?");
+            string sister = Console.ReadLine();
+            int sisterGuess = Convert.ToInt32(sister);
+            SisterAnswer(sisterGuess);
 
-            //Console.WriteLine("What's my favorite movie genre?");
-            //string movieGenre = Console.ReadLine();
+            Console.WriteLine("My favorite movie genre is ");
+            string movieGenre = Console.ReadLine();
         }
 
         static void ParrotAnswer(string parrot)
@@ -43,13 +45,59 @@ namespace AboutMe
             {
                 string dontComprehend = "Sorry, you did not enter the correct value.";
                 Console.Write(dontComprehend);
-             }
+            }
+        }
 
+        static void SwimAnswer(string canISwim)
+        {
+            if (canISwim == "yes")
+            {
+                string incorrectMessage = "Sorry, you got that incorrect.";
+                Console.Write(incorrectMessage);
+            }
+            else if (canISwim == "no")
+            {
+                string correctMessage = "Ding Ding! You got that correct!";
+                Console.Write(correctMessage);
+            }
+            else
+            {
+                string dontComprehend = "Sorry, you did not enter the correct value.";
+                Console.Write(dontComprehend);
+            }
+        }
 
-        //static void SisterAnswer(int sisterGuess)
-        //    {
-        //        if 
-        //    }
+        static string CandyAnswer(string candy)
+        {
+            if (candy == "chocolate")
+            {
+                string incorrectMessage = "Sorry, you got that incorrect.";
+                Console.Write(incorrectMessage);
+            }
+            else if (candy == "no")
+            {
+                string correctMessage = "Ding Ding! You got that correct!";
+                Console.Write(correctMessage);
+            }
+            else
+            {
+                string dontComprehend = "Sorry, you did not enter the correct value.";
+                Console.Write(dontComprehend);
+            }
+        }
+
+            static void SisterAnswer(int sisterGuess)
+            {
+            if (sisterGuess == 1)
+            {
+                string correctMessage = "That's correct!";
+                Console.Write(correctMessage);
+            }
+            else
+            {
+                string incorrectMessage = "That is incorrect!";
+                Console.Write(incorrectMessage);
+            }
                
         } 
     }
