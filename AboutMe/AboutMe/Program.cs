@@ -6,24 +6,24 @@ namespace AboutMe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("How well do you know me?");
+            Console.WriteLine("How well do you know me? ");
 
-            Console.Write("Do I have a pet parrot?");
+            Console.WriteLine("Do I have a pet parrot? "); 
             string parrot = Console.ReadLine();
             string caseParrot = parrot.ToUpper();
             ParrotAnswer(caseParrot);
 
-            Console.WriteLine("Can I swim?");
+            Console.WriteLine("Can I swim? ");
             string canISwim = Console.ReadLine();
             string caseSwim = canISwim.ToUpper();
             SwimAnswer(canISwim);
 
-            Console.WriteLine("What is my favorite candy?");
+            Console.WriteLine("What is my favorite candy? ");
             string candy = Console.ReadLine();
             string caseCandy = candy.ToUpper();
-            CandyAnswer(candy);
+            CandyAnswer(caseCandy);
 
-            Console.WriteLine("How many sisters do I have?");
+            Console.WriteLine("How many sisters do I have? ");
             string sister = Console.ReadLine();
             int sisterGuess = Convert.ToInt32(sister);
             SisterAnswer(sisterGuess);
@@ -77,12 +77,7 @@ namespace AboutMe
         {
             if (caseCandy == "chocolate")
             {
-                string incorrectMessage = "Sorry, you got that incorrect.";
-                Console.Write(incorrectMessage);
-            }
-            else if (caseCandy == "no")
-            {
-                string correctMessage = "Ding Ding! You got that correct!";
+                string correctMessage = "Correct.";
                 Console.Write(correctMessage);
             }
             else
