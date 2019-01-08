@@ -15,10 +15,12 @@ namespace AboutMe
 
             Console.WriteLine("Can I swim?");
             string canISwim = Console.ReadLine();
+            string caseSwim = canISwim.ToUpper();
             SwimAnswer(canISwim);
 
             Console.WriteLine("What is my favorite candy?");
             string candy = Console.ReadLine();
+            string caseCandy = candy.ToUpper();
             CandyAnswer(candy);
 
             Console.WriteLine("How many sisters do I have?");
@@ -28,6 +30,7 @@ namespace AboutMe
 
             Console.WriteLine("My favorite movie genre is Fantasy. True or False? ");
             string movieGenre = Console.ReadLine();
+            string caseMovie = movieGenre.ToUpper();
             MovieGenreAnswer(movieGenre);
 
         }
@@ -51,14 +54,14 @@ namespace AboutMe
             }
         }
 
-        static void SwimAnswer(string canISwim)
+        static void SwimAnswer(string caseSwim)
         {
-            if (canISwim == "yes")
+            if (caseSwim == "yes")
             {
                 string incorrectMessage = "Sorry, you got that incorrect.";
                 Console.Write(incorrectMessage);
             }
-            else if (canISwim == "no")
+            else if (caseSwim == "no")
             {
                 string correctMessage = "Ding Ding! You got that correct!";
                 Console.Write(correctMessage);
@@ -70,14 +73,14 @@ namespace AboutMe
             }
         }
 
-        static void CandyAnswer(string candy)
+        static void CandyAnswer(string caseCandy)
         {
-            if (candy == "chocolate")
+            if (caseCandy == "chocolate")
             {
                 string incorrectMessage = "Sorry, you got that incorrect.";
                 Console.Write(incorrectMessage);
             }
-            else if (candy == "no")
+            else if (caseCandy == "no")
             {
                 string correctMessage = "Ding Ding! You got that correct!";
                 Console.Write(correctMessage);
@@ -106,9 +109,9 @@ namespace AboutMe
             }
         }
 
-        static bool MovieGenreAnswer(string movieGenre)
+        static bool MovieGenreAnswer(string caseMovie)
         {
-        if (movieGenre == "true")
+        if (caseMovie == "true")
             {
                 Console.WriteLine("Nope.");
                 return false;
