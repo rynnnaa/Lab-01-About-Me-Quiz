@@ -39,17 +39,12 @@ namespace AboutMe
             if (caseParrot == "yes")
             {
                 string incorrectMessage = "Sorry, you got that incorrect.";
-                Console.Write(incorrectMessage);
+                Console.WriteLine(incorrectMessage);
             }
-            else if (caseParrot == "no")
+            else 
             {
                 string correctMessage = "Ding Ding! You got that correct!";
-                Console.Write(correctMessage);
-            }
-            else
-            {
-                string dontComprehend = "Sorry, you did not enter the correct value.";
-                Console.Write(dontComprehend);
+                Console.WriteLine(correctMessage);
             }
         }
 
@@ -58,17 +53,17 @@ namespace AboutMe
             if (caseSwim == "yes")
             {
                 string incorrectMessage = "Sorry, you got that incorrect.";
-                Console.Write(incorrectMessage);
+                Console.WriteLine(incorrectMessage);
             }
             else if (caseSwim == "no")
             {
                 string correctMessage = "Ding Ding! You got that correct!";
-                Console.Write(correctMessage);
+                Console.WriteLine(correctMessage);
             }
             else
             {
                 string dontComprehend = "Sorry, you did not enter the correct value.";
-                Console.Write(dontComprehend);
+                Console.WriteLine(dontComprehend);
             }
         }
 
@@ -77,12 +72,12 @@ namespace AboutMe
             if (caseCandy == "chocolate")
             {
                 string correctMessage = "Correct.";
-                Console.Write(correctMessage);
+                Console.WriteLine(correctMessage);
             }
             else
             {
-                string dontComprehend = "Sorry, you did not enter the correct value.";
-                Console.Write(dontComprehend);
+                string inCorrectMessage = "That is incorrect";
+                Console.WriteLine(inCorrectMessage);
             }
         }
 
@@ -94,13 +89,13 @@ namespace AboutMe
                 if (sisterGuess == 1)
                 {
                     string correctMessage = "That's correct!";
-                    Console.Write(correctMessage);
+                    Console.WriteLine(correctMessage);
                     return correctGuess;
                 }
                 else
                 {
                     string incorrectMessage = "That is incorrect!";
-                    Console.Write(incorrectMessage);
+                    Console.WriteLine(incorrectMessage);
                     return correctGuess;
                 }
             }
