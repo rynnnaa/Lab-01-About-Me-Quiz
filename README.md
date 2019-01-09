@@ -16,4 +16,6 @@ Purpose of the program to create an About Me Quiz using C# languange's Main meth
 To Run the program, user must click the start button (Green arrow) in Visual Studio.
 
 Successful Output
+![About Me Quiz](https://github.com/rynnnaa/Lab-01-About-Me-Quiz/blob/master/assets/Solution%20Capture.PNG)
+
 
